@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "superclarendon", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --sort: #1D1D1B;
+    --hvid: #fff;
+    --blå: #263570;
+    --brun: #6C4D30;
+    --beige: #EAD98F;
+    --mørkgrøn: #616E43;
+    --lysgrøn: #97A068;
+    --grå: #3e3e3e;
+}
+
+/* her starter link-justeringer */
+
+a:link {
+    color: var(--hvid);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+a:visited {
+    color: var(--mørkgrøn);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+a:hover {
+    color: var(--lysgrøn);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+a:active {
+    color: var(--mørkgrøn);
+    background-color: transparent;
+    text-decoration: underline;
+  }
+
+
+body {
+    text-transform: uppercase;
+    text-decoration: none;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position:fixed;
+    display:flex;
+    top:0;
+    left:0;
+    right:0;
+    background: var(--sort);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 30px 7%;
+    display: flex;
+    min-width: 160px;
+    justify-content: space-around;
+    z-index: 1000;
+}
+
+#headlogo {
+    position: absolute;
+    top: 18px;
+    left: 60px;
+    width: auto;
+}
+
+/* søgefelt */
+
+input[type=text] {
+    position: absolute;
+    background: var(--hvid);
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    top: 40px;
+    right: 40px;
+  }
+  
+/* hvor meget søgefeltet skal ændre sig, når den er i brug */
+
+  input[type=text]:focus {
+    width: auto;
+  }
+
+/* menu i header */
+
+header .menu {
+    font-weight: bolder;
+    font-size: 15px;
+    color: var(--hvid);
+}
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    text-decoration-line: underline;
+    text-decoration-color: var(--hvid);
+    position: relative;
+    float: left;
+    right: 2px;
+}
+
+header .navbar ul li a {
+    text-decoration: none;
+    font-size: 15px;
+    padding: 15px;
+    color: var(--hvid);
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    background: var(--grå);
+    color: var(--hvid);
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    padding: 20px;
+    width: auto;
+    background: var(--sort);
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid var(--sort);
+}
+
+header .navbar ul li ul li ul {
+    left: 200px;
+    top:0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul {
+    display: block;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 15px;
+    color: var(--grå);
+    cursor: pointer;
+    display: none;
+}
+
+main {
+    margin-top: 107px;
+    min-height: calc(100vh - 77px - 184px);
+}
+
+.container {
+    position: absolute;
+    text-align: center;
+    color: white;
+  }
+
+.indhold {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.baggrund {
+    position: relative;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 900;
+}
+
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    z-index: 999;
+
+    /*
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--mørkgrøn);
+    margin: 100px;
+    width: 130px;
+    border: 8px solid var(--mørkgrøn);
+    text-align: center;
+    text-decoration: none;
+    display:inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: center;
+    -webkit-transition-duration: 0.4s;  Safari
+    transition-duration: 0.4s;
+    z-index: 999;
+    */
+}
+
+.button2 {
+    position: relative;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    top: 820px;
+    left: 300px;
+    z-index: 999;
+}
+
+.button3 {
+    position: relative;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    top: 1300px;
+    right: 180px;
+    z-index: 999;
+}
+  
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+footer {
+    position:absolute;
+    display:flex;
+    background-color: var(--sort);
+    color: var(--hvid);
+    padding: 35px;
+    justify-content: space-between;
+    font-size: small;
+    flex-wrap: wrap-reverse;
+    list-style-type: none;
+    bottom: -2495px;
+    left:0;
+    right:0;
+    z-index: 10;
+  }
+
+/* wireframe i iphoneformat */
+
+@media(max-width:991px){
+
+
+    header {
+        padding: 20px;
+    }
+    
+    header label {
+        display: block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left:0;
+        right:0;
+        background: #fff;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        width: 100%;
+        left:0;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: block;
+    }
+
+}
